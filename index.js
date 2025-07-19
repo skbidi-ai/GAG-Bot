@@ -202,11 +202,11 @@ client.on("messageCreate", async (message) => {
         );
 
       const ticketmsg = new EmbedBuilder()
-        .setTitle(`Grow A Garden┃Trading & Stocks Tickets`)
+        .setTitle(`Tasty's Tickets`)
         
         .setDescription(
           
-          `**Welcome to our Ticket System!** 🎫
+          `**Welcome to tasty's tickets!** 🎫
          ==========================
 📨 **Inquiry Tickets:** Ask about pet prices and get assistance.
 
