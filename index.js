@@ -67,7 +67,7 @@ client.on("messageCreate", async (message) => {
       const balanceEmbed = new EmbedBuilder()
         .setTitle("Points Balance")
         .setDescription(`${user.displayName} has **${balance}** Refferal Points`)
-        .setColor("#00FF46")
+        .setColor("#F9B0FF")
         .setThumbnail(user.displayAvatarURL());
       
       return message.channel.send({ embeds: [balanceEmbed] });
@@ -179,7 +179,7 @@ client.on("messageCreate", async (message) => {
 \`!coins remove @user amount\` - Remove coins from a user
 \`!coins set @user amount\` - Set a user's coin balance
         `)
-        .setColor("#0099FF")
+        .setColor("#F9B0FF")
         .setFooter({ text: "Admin commands require Administrator permissions" });
       
       message.channel.send({ embeds: [helpEmbed] });
@@ -253,16 +253,16 @@ client.on("interactionCreate", async (interaction) => {
           .setDescription(
             "**Hello!**\nPlease provide the reason for this support ticket, and our staff team will respond as fast as possible"
           )
-          .setFooter({ text: `User ID: ${interaction.user.id} Grow A Garden┃Trading & Stocks.` })
-          .setColor("#00ff04");
+          .setFooter({ text: `User ID: ${interaction.user.id} Tasty Tickets.` })
+          .setColor("#F9B0FF");
 
         const premiummsg = new EmbedBuilder()
           .setTitle(`${interaction.user.displayName}'s Buying Ticket`)
           .setDescription(
             "**Hello there!**\nPlease provide the reason for this buying ticket, and our staff team will respond as fast as possible"
           )
-          .setFooter({ text: `User ID: ${interaction.user.id} Game Services Premuim.` })
-          .setColor("#ffc916");
+          .setFooter({ text: `User ID: ${interaction.user.id} Tasty Tickets.` })
+          .setColor("#F9B0FF");
 
         if (interaction.customId === "support") {
           const ticket = await interaction.guild.channels.create({
