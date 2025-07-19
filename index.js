@@ -92,7 +92,7 @@ client.on("messageCreate", async (message) => {
       const giveEmbed = new EmbedBuilder()
         .setTitle("💰 Points Given")
         .setDescription(`Given **${amount}** Points to ${user.displayName}\nNew balance: **${newBalance}** Points`)
-        .setColor("#00FF46")
+        .setColor("#F9B0FF")
         .setThumbnail(user.displayAvatarURL());
       
       message.channel.send({ embeds: [giveEmbed] });
@@ -112,7 +112,7 @@ client.on("messageCreate", async (message) => {
       const removeEmbed = new EmbedBuilder()
         .setTitle("💰 Coins Removed")
         .setDescription(`Removed **${amount}** Points from ${user.displayName}\nNew balance: **${newBalance}** Points`)
-        .setColor("#FF0000")
+        .setColor("#F9B0FF")
         .setThumbnail(user.displayAvatarURL());
       
       message.channel.send({ embeds: [removeEmbed] });
@@ -132,7 +132,7 @@ client.on("messageCreate", async (message) => {
       const setEmbed = new EmbedBuilder()
         .setTitle("💰 Coins Set")
         .setDescription(`Set ${user.displayName}'s coins to **${newBalance}**`)
-        .setColor("#0099FF")
+        .setColor("#F9B0FF")
         .setThumbnail(user.displayAvatarURL());
       
       message.channel.send({ embeds: [setEmbed] });
@@ -158,7 +158,7 @@ client.on("messageCreate", async (message) => {
       const leaderboardEmbed = new EmbedBuilder()
         .setTitle("🏆 Coin Leaderboard")
         .setDescription(description)
-        .setColor("#FFD700")
+        .setColor("#F9B0FF")
         .setFooter({ text: `${message.guild.name} | Top 10 Users` });
       
       message.channel.send({ embeds: [leaderboardEmbed] });
@@ -192,11 +192,11 @@ client.on("messageCreate", async (message) => {
       const row = new ActionRowBuilder()
         .addComponents(
           new ButtonBuilder()
-            .setLabel("📨 Support Tickets")
+            .setLabel("📨 Inquiry Tickets")
             .setStyle(ButtonStyle.Primary)
             .setCustomId("support"),
           new ButtonBuilder()
-            .setLabel("💸 Middleman Tickets")
+            .setLabel("💸 Buying Tickets")
             .setStyle(ButtonStyle.Primary)
             .setCustomId("premium")
         );
@@ -208,13 +208,13 @@ client.on("messageCreate", async (message) => {
           
           `**Welcome to our Ticket System!** 🎫
          ==========================
-📨 **Support Tickets:** For general support and assistance.
+📨 **Inquiry Tickets:** Ask about pet prices and get assistance.
 
-💸 **Middleman Tickets:** For using our free middleman services.
+💸 **Buying Tickets:** Buy from tasty.
 `
         )
         .setFooter({ text: `${message.guild.name} Tickets | Made by Game Services`, iconURL: message.guild.iconURL() })
-        .setColor("#00ff04");
+        .setColor("#F9B0FF");
 
       message.channel.send({
         embeds: [ticketmsg],
